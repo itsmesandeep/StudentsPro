@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'cdnlines.html' %}
+    <title>homeHtml</title>
+</head>
+<body>
+{% include 'navbar.html' %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="container" >
+            <center>
+                <h1>Student Details</h1>
+            </center>
+
+        <div class="row">
+            Enter Student Roll Number:<input type="number" name="srnum" class="form-control">
+        </div>
+        <div class="row">
+            Enter Student Roll Number for Month:<input type="number" name="srnumm" class="form-control">
+        </div>
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student first Name:<input type="text" name="sfname" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Last Name:<input type="text" name="slname" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Email:<input type="email" name="semail" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student School Branch Name:<input type="text" name="ssname" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Class:<input type="number" name="sclass" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Section:<input type="text" name="ssection" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Telugu Marks:<input type="number" name="tmarks" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student English Marks:<input type="number" name="emarks" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Hindi Marks:<input type="number" name="hmarks" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Maths Marks:<input type="number" name="mmarks" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Science Marks:<input type="number" name="smarks" class="form-control">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Social Marks:<input type="number" name="ssmarks" class="form-control">
+            </div>
+        </div>
+        <br>
+        <br>
+        <center>
+        <input type="submit" value="Update" class="btn btn-success">
+        <input type="reset" value="Reset" class="btn btn-danger">
+        </center>
+    </div>
+</form>
+</body>
+</html>

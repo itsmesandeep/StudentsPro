@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'cdnlines.html' %}
+    <title>StudentsDisplay</title>
+    <style>
+        .border-box{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+
+    <div class="container-fluid">
+                <h2 class="offset-md-4 col-md-5">Students Details View</h2>
+    <hr>
+        <div class="row ">
+                <table class="table" >
+                    <thead>
+                    <tr>
+                        <th>Roll</th>
+                        <th>Adm Num</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Email</th>
+                        <th>School Name</th>
+                        <th>Class Name</th>
+                        <th>Section Name</th>
+                        <th>Telugu Marks</th>
+                        <th>English Marks</th>
+                        <th>Hindi Marks</th>
+                        <th>Maths Marks</th>
+                        <th>Science Marks</th>
+                        <th>Social Marks</th>
+                        <th>Modify</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.studentsRollNumber }}</td>
+                        <td>{{ student.studentsRollOfMonth }}</td>
+                        <td>{{ student.studentfName}}</td>
+                        <td>{{ student.studentlName }}</td>
+                        <td>{{ student.studentEmail }}</td>
+                        <td>{{ student.studentSchoolName }}</td>
+                        <td>{{ student.studentClassName }}</td>
+                        <td>{{ student.studenSectionName }}</td>
+                        <td>{{ student.student_telMarks }}</td>
+                        <td>{{ student.student_englishMarks }}</td>
+                        <td>{{ student.student_hindiMarks }}</td>
+                        <td>{{ student.student_mathMarks }}</td>
+                        <td>{{ student.student_science}}</td>
+                        <td>{{ student.student_social}}</td>
+                        <td><a href="updateView/{{ student.id }}" class="btn text-white" style="background-color: black;width: 65px;margin-left:0;margin-bottom: 5px " >Edit</a>
+                            <a href="deleteView/{{ student.id }}" class="btn text-white" style="background-color: black;width: 65px" >Delete</a>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'cdnlines.html' %}
+    <title>homeHtml</title>
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<form method="POST" action="/insertUpdatedData/{{ student.id }}">
+    {% csrf_token %}
+    <div class="container" >
+        <center>
+            <h1>Student Details</h1>
+        </center>
+
+        <div class="row">
+            Enter Student Roll Number:<input type="number" name="srnum" class="form-control"
+                                             value="{{ student.studentsRollNumber }}">
+        </div>
+        <div class="row">
+            Enter Student Roll Number for Month:<input type="number" name="srnumm"
+                                                       class="form-control value="
+                                                       value="{{ student.studentsRollOfMonth }}">
+        </div>
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student first Name:<input type="text" name="sfname" class="form-control"
+                                                value="{{ student.studentfName }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Last Name:<input type="text" name="slname" class="form-control"
+                                               value="{{ student.studentlName }}">
+            </div>
+        </div>
+        <div class=" row">
+            <div class=" col-md-6">
+                Enter Student Email:<input type="email" name="semail" class="form-control"
+                                           value="{{ student.studentEmail }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student School Branch Name:<input type="text" name="ssname" class="form-control"
+                                                        value="{{ student.studentSchoolName }}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Class:<input type="number" name="sclass" class="form-control"
+                                           value="{{ student.studentClassName }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Section:<input type="text" name="ssection" class="form-control"
+                                             value="{{ student.studenSectionName }}">
+            </div>
+        </div>
+
+        <div class=" row">
+            <div class=" col-md-6">
+                Enter Student Telugu Marks:<input type="number" name="tmarks" class="form-control"
+                                                  value="{{ student.student_telMarks }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student English Marks:<input type="number" name="emarks" class="form-control"
+                                                   value="{{ student.student_englishMarks }}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Hindi Marks:<input type="number" name="hmarks" class="form-control"
+                                                 value="{{ student.student_hindiMarks }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Maths Marks:<input type="number" name="mmarks" class="form-control"
+                                                 value="{{ student.student_mathMarks }}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-md-6">
+                Enter Student Science Marks:<input type="number" name="smarks" class="form-control"
+                                                   value="{{ student.student_science }}">
+            </div>
+            <div class=" col-md-6">
+                Enter Student Social Marks:<input type="number" name="ssmarks" class="form-control"
+                                                  value="{{ student.student_social }}">
+            </div>
+        </div>
+        <br>
+        <br>
+        <center>
+            <input type="submit" value="Update" class="btn btn-success">
+            <input type="reset" value="Reset" class="btn btn-danger">
+        </center>
+    </div>
+</form>
+</body>
+</html>
